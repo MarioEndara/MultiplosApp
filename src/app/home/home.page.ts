@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+<<<<<<< HEAD
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { 
@@ -7,11 +8,15 @@ import {
   IonCardContent, 
   IonButton 
 } from '@ionic/angular';
+=======
+import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular';
+>>>>>>> 166a1b8413b166233a242b33e0f05741a42f4ea7
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
+<<<<<<< HEAD
   standalone: true,
   imports: [
     CommonModule,
@@ -74,3 +79,10 @@ export class HomePage {
     this.primos = listaPrimos;
   }
 }
+=======
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent],
+})
+export class HomePage {
+  constructor() {}
+}
+>>>>>>> 166a1b8413b166233a242b33e0f05741a42f4ea7
