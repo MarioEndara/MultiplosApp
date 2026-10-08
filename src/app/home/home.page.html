@@ -1,0 +1,52 @@
+<ion-content [fullscreen]="true" class="ion-padding custom-background">
+  <div class="header-container">
+    <h1 class="titulo">Múltiplos de:</h1>
+    <p class="subtitulo">Desarrollado por: Mario Endara</p>
+  </div>
+
+  <ion-card class="contador-card">
+    <ion-card-content class="card-content">
+      <span>Múltiplos de 2: <strong>{{ mult2 }}</strong></span>
+      <ion-button size="small" (click)="incrementar(2)" color="primary">+2</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="contador-card">
+    <ion-card-content class="card-content">
+      <span>Múltiplos de 3: <strong>{{ mult3 }}</strong></span>
+      <ion-button size="small" (click)="incrementar(3)" color="primary">+3</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="contador-card">
+    <ion-card-content class="card-content">
+      <span>Múltiplos de 5: <strong>{{ mult5 }}</strong></span>
+      <ion-button size="small" (click)="incrementar(5)" color="primary">+5</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="contador-card">
+    <ion-card-content class="card-content">
+      <span>Múltiplos de 7: <strong>{{ mult7 }}</strong></span>
+      <ion-button size="small" (click)="incrementar(7)" color="primary">+7</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="contador-card">
+    <ion-card-content class="card-content">
+      <span>Múltiplos de 10: <strong>{{ mult10 }}</strong></span>
+      <ion-button size="small" (click)="incrementar(10)" color="primary">+10</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" color="success" class="ion-margin-top" (click)="calcularPrimos()">
+    Mostrar Números Primos
+  </ion-button>
+
+  <ion-card *ngIf="primos.length > 0" class="primos-card">
+    <ion-card-content>
+      <h2>Números Primos:</h2>
+      <p>{{ primos.join(', ') }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
